@@ -19,7 +19,6 @@ export default function DashboardPage() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-4xl py-8 mx-auto">
-       <BackButton to="/" label="Home" /> 
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Focus Analytics</h1>
         <button
