@@ -11,6 +11,7 @@ export default function SettingsPage() {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-lg py-8 mx-auto">
+       <BackButton to="/" label="Home" /> 
       <h1 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">Settings</h1>
       <div className="p-6 space-y-6 glass rounded-2xl">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
