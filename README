@@ -1,0 +1,38 @@
+# Pomodoro Focus Timer
+
+A modern, production-ready Pomodoro timer with deep work analytics, glassmorphism UI, sound notifications, and dark/light mode.
+
+![Pomodoro Focus](https://img.shields.io/badge/react-19-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+
+## Features
+
+- 25/5/15 default timer (fully customizable)
+- Animated SVG progress ring with color-coded sessions
+- Audio & browser notifications
+- Statistics dashboard (daily, weekly, streaks, productivity score)
+- LocalStorage persistence, resume on refresh
+- Keyboard shortcuts (Space, R, S, M)
+- Dark/Light theme toggle
+- Confetti celebrations, focus quotes, achievement badges
+- Responsive, accessible (ARIA labels, focus states)
+- Express backend with in-memory storage (ready for DB)
+
+## Tech Stack
+
+- **Frontend:** React 19, Vite, Tailwind CSS, Framer Motion, React Icons
+- **Backend:** Node.js, Express
+- **Storage:** LocalStorage (frontend), in-memory (backend)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/pomodoro-focus.git
+   cd pomodoro-focus
