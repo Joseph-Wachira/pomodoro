@@ -18,18 +18,17 @@ export default function DashboardPage() {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="max-w-4xl mx-auto py-8"
-    >
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-2xl font-bold text-white">Focus Analytics</h1>
-        <button onClick={exportJSON} className="glass px-3 py-2 rounded-lg flex items-center gap-2 text-sm hover:bg-white/10 transition">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-4xl py-8 mx-auto">
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Focus Analytics</h1>
+        <button
+          onClick={exportJSON}
+          className="flex items-center gap-2 px-3 py-2 text-sm text-gray-700 transition rounded-lg glass hover:bg-gray-200 dark:hover:bg-white/10 dark:text-gray-300"
+        >
           <FiDownload /> Export
         </button>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         <StatsCard icon={<FiClock />} label="Today Focus" value={Math.floor(stats.todayFocus / 60)} suffix=" min" />
         <StatsCard icon={<FiTarget />} label="Today Pomodoros" value={stats.todayPomodoros} />
         <StatsCard icon={<FiActivity />} label="Weekly" value={stats.weeklyPomodoros} />

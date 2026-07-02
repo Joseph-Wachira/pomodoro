@@ -7,16 +7,16 @@ export default function CountdownDisplay({ timeLeft, sessionType }) {
   const formattedSeconds = String(seconds).padStart(2, '0');
 
   const colorMap = {
-    work: 'text-blue-400',
-    shortBreak: 'text-emerald-400',
-    longBreak: 'text-purple-400',
+    work: 'text-blue-600 dark:text-blue-400',
+    shortBreak: 'text-emerald-600 dark:text-emerald-400',
+    longBreak: 'text-purple-600 dark:text-purple-400',
   };
 
   return (
     <div className="mt-8 text-center">
       <div
         className={`text-7xl md:text-8xl font-bold tracking-tight ${
-          colorMap[sessionType] || 'text-blue-400'
+          colorMap[sessionType] || 'text-blue-600 dark:text-blue-400'
         }`}
         aria-live="polite"
         aria-label={`${formattedMinutes} minutes and ${formattedSeconds} seconds remaining`}
@@ -36,7 +36,7 @@ export default function CountdownDisplay({ timeLeft, sessionType }) {
           </motion.span>
         </AnimatePresence>
       </div>
-      <p className="mt-2 text-sm tracking-widest text-gray-400 uppercase">
+      <p className="mt-2 text-sm tracking-widest text-gray-500 uppercase dark:text-gray-400">
         {sessionType === 'work'
           ? 'Focus'
           : sessionType === 'shortBreak'

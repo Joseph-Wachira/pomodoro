@@ -24,7 +24,7 @@ export default function FocusQuote() {
       key={quote}
       initial={{ opacity: 0, y: 5 }}
       animate={{ opacity: 1, y: 0 }}
-      className="text-center text-gray-500 italic mt-4 text-sm max-w-md mx-auto"
+      className="max-w-md mx-auto mt-4 text-sm italic text-center text-gray-500 dark:text-gray-400"
     >
       “{quote}”
     </motion.p>

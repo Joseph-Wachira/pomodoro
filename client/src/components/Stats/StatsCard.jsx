@@ -6,13 +6,13 @@ export default function StatsCard({ label, value, icon, suffix = '' }) {
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
-      className="glass rounded-2xl p-4 flex flex-col items-center justify-center text-center"
+      className="flex flex-col items-center justify-center p-4 text-center glass rounded-2xl"
     >
-      {icon && <div className="text-2xl mb-1">{icon}</div>}
-      <p className="text-3xl font-bold text-white">
+      {icon && <div className="mb-1 text-2xl text-gray-700 dark:text-gray-300">{icon}</div>}
+      <p className="text-3xl font-bold text-gray-900 dark:text-white">
         {value}{suffix}
       </p>
-      <p className="text-xs text-gray-400 mt-1">{label}</p>
+      <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{label}</p>
     </motion.div>
   );
 }

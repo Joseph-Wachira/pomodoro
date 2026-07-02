@@ -10,48 +10,48 @@ export default function SettingsPage() {
   };
 
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-lg mx-auto py-8">
-      <h1 className="text-2xl font-bold text-white mb-6">Settings</h1>
-      <div className="glass rounded-2xl p-6 space-y-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-lg py-8 mx-auto">
+      <h1 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">Settings</h1>
+      <div className="p-6 space-y-6 glass rounded-2xl">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
-            <label className="block text-sm text-gray-400 mb-1">Work (min)</label>
+            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-400">Work (min)</label>
             <input
               type="number"
               name="workDuration"
               value={settings.workDuration / 60}
               onChange={(e) => updateSettings({ workDuration: e.target.value * 60 })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white"
+              className="w-full px-3 py-2 text-gray-900 bg-gray-100 border border-gray-300 dark:bg-white/5 dark:border-white/10 rounded-xl dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-400 mb-1">Short Break (min)</label>
+            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-400">Short Break (min)</label>
             <input
               type="number"
               name="shortBreakDuration"
               value={settings.shortBreakDuration / 60}
               onChange={(e) => updateSettings({ shortBreakDuration: e.target.value * 60 })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white"
+              className="w-full px-3 py-2 text-gray-900 bg-gray-100 border border-gray-300 dark:bg-white/5 dark:border-white/10 rounded-xl dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-400 mb-1">Long Break (min)</label>
+            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-400">Long Break (min)</label>
             <input
               type="number"
               name="longBreakDuration"
               value={settings.longBreakDuration / 60}
               onChange={(e) => updateSettings({ longBreakDuration: e.target.value * 60 })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white"
+              className="w-full px-3 py-2 text-gray-900 bg-gray-100 border border-gray-300 dark:bg-white/5 dark:border-white/10 rounded-xl dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
           <div>
-            <label className="block text-sm text-gray-400 mb-1">Daily Goal (pomodoros)</label>
+            <label className="block mb-1 text-sm text-gray-600 dark:text-gray-400">Daily Goal (pomodoros)</label>
             <input
               type="number"
               name="dailyGoal"
               value={settings.dailyGoal}
               onChange={(e) => updateSettings({ dailyGoal: Number(e.target.value) })}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-3 py-2 text-white"
+              className="w-full px-3 py-2 text-gray-900 bg-gray-100 border border-gray-300 dark:bg-white/5 dark:border-white/10 rounded-xl dark:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
             />
           </div>
         </div>
@@ -63,13 +63,13 @@ export default function SettingsPage() {
             { label: 'Notifications', name: 'notificationsEnabled' },
           ].map((item) => (
             <label key={item.name} className="flex items-center justify-between cursor-pointer">
-              <span className="text-sm text-gray-300">{item.label}</span>
+              <span className="text-sm text-gray-700 dark:text-gray-300">{item.label}</span>
               <input
                 type="checkbox"
                 name={item.name}
                 checked={settings[item.name]}
                 onChange={handleChange}
-                className="h-5 w-5 rounded accent-indigo-500"
+                className="w-5 h-5 rounded accent-indigo-500"
               />
             </label>
           ))}

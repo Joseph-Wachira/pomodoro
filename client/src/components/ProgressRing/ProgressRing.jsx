@@ -20,13 +20,17 @@ export default function ProgressRing() {
     longBreak: '#8b5cf6',
   }[currentSession] || '#3b82f6';
 
+  const trackColor = settings.theme === 'dark'
+    ? 'rgba(255,255,255,0.1)'
+    : 'rgba(0,0,0,0.15)';
+
   return (
-    <div className="relative w-72 h-72 mx-auto">
+    <div className="relative mx-auto w-72 h-72">
       <svg className="w-full h-full -rotate-90" viewBox="0 0 260 260">
         <circle
           cx="130" cy="130" r="120"
           fill="none"
-          stroke="rgba(255,255,255,0.1)"
+          stroke={trackColor}
           strokeWidth="12"
         />
         <motion.circle
@@ -42,7 +46,9 @@ export default function ProgressRing() {
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-sm font-medium text-gray-300">{Math.round(progress)}%</span>
+        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+          {Math.round(progress)}%
+        </span>
       </div>
     </div>
   );

@@ -15,10 +15,13 @@ export default function AchievementBadge({ completedCount }) {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="flex flex-wrap gap-2 mt-4 justify-center"
+      className="flex flex-wrap justify-center gap-2 mt-4"
     >
       {earned.map((badge) => (
-        <div key={badge.count} className="flex items-center gap-1 px-2 py-1 rounded-full glass text-xs">
+        <div
+          key={badge.count}
+          className="flex items-center gap-1 px-2 py-1 text-xs text-gray-700 rounded-full glass dark:text-gray-200"
+        >
           <span>{badge.icon}</span> {badge.label}
         </div>
       ))}

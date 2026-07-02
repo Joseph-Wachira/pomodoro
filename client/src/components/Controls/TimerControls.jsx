@@ -11,7 +11,7 @@ export default function TimerControls() {
         whileTap={{ scale: 0.95 }}
         onClick={reset}
         aria-label="Reset timer"
-        className="p-3 rounded-full glass text-gray-300 hover:text-white transition"
+        className="p-3 text-gray-700 transition rounded-full glass dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
       >
         <FiRotateCcw size={22} />
       </motion.button>
@@ -20,7 +20,7 @@ export default function TimerControls() {
         whileTap={{ scale: 0.9 }}
         onClick={isRunning ? pause : start}
         aria-label={isRunning ? 'Pause timer' : 'Start timer'}
-        className="p-5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white shadow-lg shadow-indigo-500/25 transition"
+        className="p-5 text-white transition bg-indigo-600 rounded-full shadow-lg hover:bg-indigo-500 shadow-indigo-500/25"
       >
         {isRunning ? <FiPause size={28} /> : <FiPlay size={28} className="ml-1" />}
       </motion.button>
@@ -29,7 +29,7 @@ export default function TimerControls() {
         whileTap={{ scale: 0.95 }}
         onClick={skip}
         aria-label="Skip to next session"
-        className="p-3 rounded-full glass text-gray-300 hover:text-white transition"
+        className="p-3 text-gray-700 transition rounded-full glass dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
       >
         <FiSkipForward size={22} />
       </motion.button>
