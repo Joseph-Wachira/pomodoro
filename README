@@ -34,5 +34,5 @@ A modern, production-ready Pomodoro timer with deep work analytics, glassmorphis
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pomodoro-focus.git
+   git clone https://github.com/Joseph-Wachira/pomodoro
    cd pomodoro-focus
