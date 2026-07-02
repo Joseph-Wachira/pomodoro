@@ -23,18 +23,21 @@ export default function CountdownDisplay({ timeLeft, sessionType }) {
       >
         <span>{formattedMinutes}</span>
         <span className="mx-1">:</span>
-        <AnimatePresence mode="wait">
-          <motion.span
-            key={seconds}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="inline-block"
-          >
-            {formattedSeconds}
-          </motion.span>
-        </AnimatePresence>
+        {/* Wrapper for smooth seconds animation */}
+        <span className="relative inline-block overflow-hidden align-bottom">
+          <AnimatePresence initial={false}>
+            <motion.span
+              key={seconds}
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.25, ease: 'easeOut' }}
+              className="inline-block"
+            >
+              {formattedSeconds}
+            </motion.span>
+          </AnimatePresence>
+        </span>
       </div>
       <p className="mt-2 text-sm tracking-widest text-gray-500 uppercase dark:text-gray-400">
         {sessionType === 'work'
