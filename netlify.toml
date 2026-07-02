@@ -1,9 +1,10 @@
 [build]
   base = "client"
-  command = "npm install && npm exec vite -- build"
+  command = "npm install && node ./node_modules/vite/bin/vite.js build"
   publish = "dist"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
